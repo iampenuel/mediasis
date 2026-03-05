@@ -53,7 +53,7 @@ Mediasis is built to solve that by combining:
 ## Sample Learning Flow
 | Adaptive review feedback loop | Weak-area MCQ correction loop |
 | --- | --- |
-| ![Sample review flow](docs/media/preview/sample-use-review-correct.png) | ![Sample weak-area flow](docs/media/preview/sample-use-weak-area-mcq.png) |
+| ![Sample review flow](docs/media/preview/adaptive-review-feedback-loop.png) | ![Sample weak-area flow](docs/media/preview/weak-area-mcq-correction-loop.png) |
 
 These are real in-app examples of the two loops that drive retention:
 - identify what is due, make a quick confidence call, and get immediate reinforcement;
