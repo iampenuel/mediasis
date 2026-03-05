@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/media/logo.jpg" alt="Mediasis Koala logo" width="160" />
+  <img src="docs/media/logo.jpg" alt="Mediasis Koala logo" width="220" />
 
 # Mediasis
 
