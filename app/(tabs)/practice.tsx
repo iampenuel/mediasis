@@ -9,7 +9,7 @@ import { Banner, bodyText, Button, Card, pixelHeading, Screen, theme } from '../
 export default function PracticeScreen() {
   const router = useRouter();
   const { width } = useWindowDimensions();
-  const [categories, setCategories] = useState<Array<{ category: string; count: number }>>([]);
+  const [categories, setCategories] = useState<{ category: string; count: number }[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {

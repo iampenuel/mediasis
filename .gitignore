@@ -25,6 +25,8 @@ android/build/
 
 # Metro
 .metro-health-check*
+coverage/
+.vitest/
 
 # debug
 npm-debug.*

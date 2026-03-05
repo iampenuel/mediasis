@@ -1,0 +1,36 @@
+name: Feature Request
+description: Propose an enhancement for Mediasis.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share the outcome you want, not just implementation details.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Opportunity
+      description: What user problem are we solving?
+      placeholder: Medical learners currently...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe the preferred user experience.
+      placeholder: Add a mode that...
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      placeholder: Another option could be...
+  - type: textarea
+    id: success
+    attributes:
+      label: Success Criteria
+      description: How will we know this worked?
+      placeholder: Increased daily completion, lower weak-area error rate, etc.

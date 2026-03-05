@@ -35,7 +35,7 @@ function uniqueById(terms: Term[]) {
 }
 
 function countByRatio(total: number, ratio: [number, number, number]) {
-  const [dueRatio, weakRatio, newRatio] = ratio;
+  const [dueRatio, weakRatio] = ratio;
   const dueCount = Math.round(total * dueRatio);
   const weakCount = Math.round(total * weakRatio);
   const newCount = Math.max(0, total - dueCount - weakCount);
@@ -101,7 +101,7 @@ export function buildLessonQueue({
 
   const totalSteps = mode === 'daily' ? DEFAULT_STEP_COUNT : 10;
 
-  let planned: Array<{ term: Term; source: 'due' | 'weak' | 'new' }> = [];
+  let planned: { term: Term; source: 'due' | 'weak' | 'new' }[] = [];
 
   if (mode === 'daily') {
     const { dueCount, weakCount, newCount } = countByRatio(totalSteps, [0.6, 0.25, 0.15]);

@@ -13,7 +13,7 @@ async function getTableColumns(db: SQLite.SQLiteDatabase, table: string) {
 
 async function migrateOutboxColumns(db: SQLite.SQLiteDatabase) {
   const columns = await getTableColumns(db, 'outbox_events');
-  const migrations: Array<{ name: string; sql: string }> = [
+  const migrations: { name: string; sql: string }[] = [
     { name: 'retry_count', sql: 'ALTER TABLE outbox_events ADD COLUMN retry_count INTEGER NOT NULL DEFAULT 0' },
     { name: 'last_error', sql: 'ALTER TABLE outbox_events ADD COLUMN last_error TEXT NULL' },
     { name: 'sync_attempted_at', sql: 'ALTER TABLE outbox_events ADD COLUMN sync_attempted_at INTEGER NULL' },

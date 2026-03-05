@@ -9,7 +9,13 @@
     "web": "expo start --web",
     "import:mesh": "node scripts/import-mesh-7000.mjs",
     "ios:metro": "expo start --dev-client --localhost --clear",
-    "ios:preview": "bash ./scripts/ios-preview.sh"
+    "ios:preview": "bash ./scripts/ios-preview.sh",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings=0",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest",
+    "build:web": "expo export --platform web",
+    "ci:check": "npm run typecheck && npm run lint && npm run test && npm run build:web"
   },
   "dependencies": {
     "@expo-google-fonts/press-start-2p": "^0.4.1",
@@ -37,8 +43,12 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@types/node": "^22.19.13",
     "@types/react": "~19.1.0",
-    "typescript": "~5.9.2"
+    "eslint": "^8.57.1",
+    "eslint-config-expo": "^8.0.1",
+    "typescript": "~5.9.2",
+    "vitest": "^2.1.9"
   },
   "private": true
 }

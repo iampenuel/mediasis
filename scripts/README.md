@@ -29,6 +29,25 @@ Command:
 npm run ios:metro
 ```
 
+## Generate README Demo GIF
+
+Command:
+
+```bash
+bash ./scripts/make-demo-gif.sh
+```
+
+Optional custom input/output:
+
+```bash
+bash ./scripts/make-demo-gif.sh docs/media/demo/mediasis-demo.mov docs/media/demo/mediasis-demo.gif
+```
+
+Notes:
+- Requires `ffmpeg` installed on your machine.
+- Defaults: 18s clip, 10 FPS, width 540px.
+- Override defaults with env vars: `START_AT`, `DURATION`, `FPS`, `WIDTH`.
+
 ## Data Scripts
 
 ### Generate MeSH Starter Pack (exact 7,000)

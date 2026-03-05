@@ -39,7 +39,7 @@ your backend `term_id` column is likely `uuid` instead of `text`.
 
 ### Recommended fix path
 
-1. Apply [`schema.sql`](/Users/admin/Desktop/mediasis/app/supabase/schema.sql) in Supabase SQL Editor.
+1. Apply [`schema.sql`](schema.sql) in Supabase SQL Editor.
 2. Deploy the `sync-outbox` Edge function.
 3. Set `SYNC_ENDPOINT` (or `EXPO_PUBLIC_SYNC_ENDPOINT`) in app `.env`.
 4. Keep client `EXPO_PUBLIC_SYNC_DIRECT_FALLBACK=false` (default) so direct writes stay disabled unless explicitly needed.

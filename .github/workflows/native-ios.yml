@@ -1,0 +1,50 @@
+name: Native iOS Confidence
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 13 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: native-ios-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ios-build:
+    name: ios-build
+    runs-on: macos-14
+    env:
+      EXPO_NO_TELEMETRY: 1
+      CI: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.20.0
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify CocoaPods
+        run: pod --version
+
+      - name: Install iOS pods
+        run: |
+          cd ios
+          pod install --repo-update
+
+      - name: Build iOS app (simulator, unsigned)
+        run: |
+          xcodebuild \
+            -workspace ios/app.xcworkspace \
+            -scheme app \
+            -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO \
+            build
