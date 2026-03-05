@@ -47,7 +47,8 @@ Mediasis is built to solve that by combining:
 - Searchable personal term library
 - Offline-tolerant state with sync-ready architecture
 
-## Full demo video: [Watch the complete Mediasis flow](docs/media/demo/mediasis-demo.mov)
+## Full demo video: 
+[Watch the complete Mediasis flow](docs/media/demo/mediasis-demo.mov)
 
 ## Sample Learning Flow
 | Adaptive review feedback loop | Weak-area MCQ correction loop |
