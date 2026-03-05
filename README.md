@@ -7,7 +7,6 @@
 
 [![CI](https://github.com/iampenuel/mediasis/actions/workflows/ci.yml/badge.svg)](https://github.com/iampenuel/mediasis/actions/workflows/ci.yml)
 [![Native iOS Confidence](https://github.com/iampenuel/mediasis/actions/workflows/native-ios.yml/badge.svg)](https://github.com/iampenuel/mediasis/actions/workflows/native-ios.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 </div>
 
@@ -104,9 +103,7 @@ npm run ci:check
 ## Supabase Setup
 See [supabase/README.md](supabase/README.md) for schema and sync endpoint setup.
 
-## Collaboration and Contribution
-- Contribution guide: [CONTRIBUTING.md](CONTRIBUTING.md)
-- Security policy: [SECURITY.md](SECURITY.md)
+## Project Ops
 - Pull request template: [.github/pull_request_template.md](.github/pull_request_template.md)
 - Issue templates: [.github/ISSUE_TEMPLATE](.github/ISSUE_TEMPLATE)
 - Branch protection setup: [docs/branch-protection.md](docs/branch-protection.md)
