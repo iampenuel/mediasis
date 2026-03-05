@@ -45,7 +45,11 @@ jobs:
       - name: Install iOS pods
         run: |
           cd ios
-          pod install --deployment
+          export LANG=en_US.UTF-8
+          export LC_ALL=en_US.UTF-8
+          export NODE_BINARY="$(command -v node)"
+          echo "Using NODE_BINARY=$NODE_BINARY"
+          pod install --repo-update
 
       - name: Build iOS app (simulator, unsigned)
         run: |

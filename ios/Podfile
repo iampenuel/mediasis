@@ -1,5 +1,9 @@
-require File.join(File.dirname(`node --print "require.resolve('expo/package.json')"`), "scripts/autolinking")
-require File.join(File.dirname(`node --print "require.resolve('react-native/package.json')"`), "scripts/react_native_pods")
+node_binary = ENV['NODE_BINARY']
+node_binary = `which node`.strip if node_binary.nil? || node_binary.empty?
+raise "NODE_BINARY is not set and `node` was not found on PATH." if node_binary.nil? || node_binary.empty?
+
+require File.join(File.dirname(`#{node_binary} --print "require.resolve('expo/package.json')"`), "scripts/autolinking")
+require File.join(File.dirname(`#{node_binary} --print "require.resolve('react-native/package.json')"`), "scripts/react_native_pods")
 
 require 'json'
 podfile_properties = JSON.parse(File.read(File.join(__dir__, 'Podfile.properties.json'))) rescue {}
@@ -24,10 +28,10 @@ target 'app' do
   use_expo_modules!
 
   if ENV['EXPO_USE_COMMUNITY_AUTOLINKING'] == '1'
-    config_command = ['node', '-e', "process.argv=['', '', 'config'];require('@react-native-community/cli').run()"];
+    config_command = [node_binary, '-e', "process.argv=['', '', 'config'];require('@react-native-community/cli').run()"];
   else
     config_command = [
-      'node',
+      node_binary,
       '--no-warnings',
       '--eval',
       'require(\'expo/bin/autolinking\')',
