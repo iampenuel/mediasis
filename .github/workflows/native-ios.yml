@@ -14,7 +14,7 @@ concurrency:
 jobs:
   ios-build:
     name: ios-build
-    runs-on: macos-14
+    runs-on: macos-15
     env:
       EXPO_NO_TELEMETRY: 1
       CI: true
@@ -28,8 +28,16 @@ jobs:
           node-version: 20.20.0
           cache: npm
 
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Install CocoaPods
+        run: gem install cocoapods -v 1.16.2 --no-document
 
       - name: Verify CocoaPods
         run: pod --version
@@ -37,7 +45,7 @@ jobs:
       - name: Install iOS pods
         run: |
           cd ios
-          pod install --repo-update
+          pod install --deployment
 
       - name: Build iOS app (simulator, unsigned)
         run: |
