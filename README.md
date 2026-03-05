@@ -6,12 +6,23 @@
 ### Master clinical vocabulary, one streak at a time.
 
 [![CI](https://github.com/iampenuel/mediasis/actions/workflows/ci.yml/badge.svg)](https://github.com/iampenuel/mediasis/actions/workflows/ci.yml)
-[![Native iOS Confidence](https://github.com/iampenuel/mediasis/actions/workflows/native-ios.yml/badge.svg)](https://github.com/iampenuel/mediasis/actions/workflows/native-ios.yml)
 
 </div>
 
 Mediasis is a mobile-first medical terminology trainer inspired by game-like daily progress loops.
 It helps learners build lasting clinical vocabulary through adaptive review, weak-area targeting, and short sessions designed for real study behavior.
+
+This repository is also an **AI engineering portfolio project**.
+UI assets and visual elements were generated with Gemini, implementation/debugging velocity came from Codex (GPT-5.x), and final architecture, prompt strategy, tradeoff decisions, and validation were led by me.
+
+## AI Engineering and Prompting Focus
+I treated LLMs as collaborators, not autopilot.
+- I defined hard constraints and acceptance criteria before each task.
+- I required root-cause fixes (not hacks) for runtime/native issues.
+- I enforced verification loops (`typecheck`, `lint`, `test`, `build:web`, simulator validation).
+- I documented residual risks and follow-up actions.
+
+Full breakdown: [docs/ai-engineering-playbook.md](docs/ai-engineering-playbook.md)
 
 ## Why Mediasis Exists
 Learning clinical terms is high-volume and high-friction.
@@ -27,7 +38,7 @@ Mediasis is built to solve that by combining:
 - Medical students
 - PA students
 - Young clinical professionals
-- Recruiters and teams evaluating product-minded AI/software engineering work
+- Recruiters and teams evaluating AI-enabled product engineering execution
 
 ## Core Product Capabilities
 - Daily lesson queue with XP progression
@@ -41,7 +52,16 @@ Mediasis is built to solve that by combining:
 
 Full demo video: [Watch the complete Mediasis flow](docs/media/demo/mediasis-demo.mov)
 
-## Screenshot Gallery
+## Sample Learning Flow
+| Adaptive review feedback loop | Weak-area MCQ correction loop |
+| --- | --- |
+| ![Sample review flow](docs/media/preview/sample-use-review-correct.png) | ![Sample weak-area flow](docs/media/preview/sample-use-weak-area-mcq.png) |
+
+These are real in-app examples of the two loops that drive retention:
+- identify what is due, make a quick confidence call, and get immediate reinforcement;
+- revisit weak terms with targeted multiple-choice correction and follow-up explanation.
+
+## UI Gallery
 | Login | Home | Practice |
 | --- | --- | --- |
 | ![Login screen](docs/media/preview/login.png) | ![Home screen](docs/media/preview/home.png) | ![Practice screen](docs/media/preview/practice.png) |
@@ -110,11 +130,11 @@ See [supabase/README.md](supabase/README.md) for schema and sync endpoint setup.
 - Release process: [docs/release-process.md](docs/release-process.md)
 
 ## Project Highlights
-- Productized learning workflow with adaptive repetition logic
-- End-to-end mobile UX and content loop design
+- AI-assisted product development with human-in-the-loop validation
+- Prompt engineering for constrained execution and root-cause debugging
+- End-to-end mobile UX and content-loop design
 - Local-first architecture with optional cloud sync path
 - CI quality gates for type, lint, tests, and build checks
-- Public-repo engineering hygiene: templates, changelog, release model
 
 ## Roadmap
 - Android UX parity pass and device matrix validation
