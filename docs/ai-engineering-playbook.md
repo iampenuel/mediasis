@@ -26,7 +26,7 @@ The goal is not just to ship UI quickly, but to show structured thinking: constr
 - Built repo governance and recruiter-facing project presentation.
 - Diagnosed failing native CI behavior by tracing job-step boundaries and adjusting Pod/Node environment assumptions.
 
-## Why This Matters for Recruiting
+## What this repo shows
 This repository demonstrates practical AI engineering skills beyond prompting:
 - translating product intent into technical constraints,
 - orchestrating multiple LLMs/tools effectively,
