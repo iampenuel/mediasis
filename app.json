@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "app",
+    "slug": "app",
+    "scheme": "mediasis",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "bundleIdentifier": "com.mediasis.app",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Mediasis uses your microphone for speech-to-text in sentence completion lessons.",
+        "NSSpeechRecognitionUsageDescription": "Mediasis uses speech recognition so you can answer sentence steps by voice."
+      }
+    },
+    "android": {
+      "package": "com.mediasis.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "RECORD_AUDIO"
+      ],
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-secure-store",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Mediasis uses your microphone for speech-to-text lesson answers.",
+          "speechRecognitionPermission": "Mediasis uses speech recognition for adaptive voice practice."
+        }
+      ]
+    ],
+    "extra": {
+      "SUPABASE_URL": "https://cvliqzfxqennzdajbejk.supabase.co",
+      "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN2bGlxemZ4cWVubnpkYWpiZWprIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE4NjI1ODgsImV4cCI6MjA4NzQzODU4OH0.OyZE1SronemEWgMy7paJXYwG_eM-MWj4D5nTqZ4YApU",
+      "SYNC_ENDPOINT": "",
+      "EXPO_PUBLIC_SYNC_DIRECT_FALLBACK": "false",
+      "router": {},
+      "eas": {
+        "projectId": "353f52c9-6c8c-429d-aeb3-3fcff2215337"
+      }
+    }
+  }
+}

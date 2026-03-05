@@ -1,0 +1,44 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "import:mesh": "node scripts/import-mesh-7000.mjs",
+    "ios:metro": "expo start --dev-client --localhost --clear",
+    "ios:preview": "bash ./scripts/ios-preview.sh"
+  },
+  "dependencies": {
+    "@expo-google-fonts/press-start-2p": "^0.4.1",
+    "@supabase/supabase-js": "^2.97.0",
+    "@tanstack/react-query": "^5.90.21",
+    "babel-preset-expo": "~54.0.10",
+    "expo": "~54.0.33",
+    "expo-crypto": "~15.0.8",
+    "expo-dev-client": "~6.0.20",
+    "expo-linking": "~8.0.11",
+    "expo-router": "~6.0.23",
+    "expo-secure-store": "~15.0.8",
+    "expo-speech": "~14.0.8",
+    "expo-speech-recognition": "^3.1.1",
+    "expo-sqlite": "~16.0.10",
+    "expo-status-bar": "~3.0.9",
+    "fast-xml-parser": "^5.2.5",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0",
+    "react-native-url-polyfill": "^3.0.0",
+    "react-native-web": "~0.21.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/react": "~19.1.0",
+    "typescript": "~5.9.2"
+  },
+  "private": true
+}
