@@ -109,7 +109,7 @@ See [supabase/README.md](supabase/README.md) for schema and sync endpoint setup.
 - Branch protection setup: [docs/branch-protection.md](docs/branch-protection.md)
 - Release process: [docs/release-process.md](docs/release-process.md)
 
-## Project Highlights (Recruiter-Friendly)
+## Project Highlights
 - Productized learning workflow with adaptive repetition logic
 - End-to-end mobile UX and content loop design
 - Local-first architecture with optional cloud sync path
